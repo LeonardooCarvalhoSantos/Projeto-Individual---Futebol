@@ -6,6 +6,12 @@ body {
   color: #ffffff;
 }
 
+header h1 {
+
+  color: #000000;
+
+}
+
 a {
   color: #ffffff;
   text-decoration: none;
@@ -48,7 +54,7 @@ footer {
   width: 100%;
   height: 100px;
   padding: 30px 0;
-  background-color: #2a272a;
+  background-color: #ffffff;
 }
 
 header {
