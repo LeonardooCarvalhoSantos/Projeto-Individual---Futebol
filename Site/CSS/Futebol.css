@@ -9,7 +9,7 @@ a {
     color: #ffffff;
     text-decoration: none;
     transition: 0.5s;
-  }
+}
 
 .containerNavbar {
     width: 80%;
@@ -51,7 +51,7 @@ height: 20vh;
 
 .banner {
     background-size: cover;
-    background-image: url("imagem2.jpg");
+    background-image: url("../Imagens/imagem2.jpg");
     width: 100%;
     height: 100vh;
     display: flex;
