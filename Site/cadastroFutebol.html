@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,9 @@
     <link rel="shortcut icon" href="C:\Users\leona\OneDrive - SPTech School\PROJETO DO LEOZIN\Futebol.jpg">
     <link rel="stylesheet" href="CSS/Futebol.css">
 </head>
+
 <body>
-    
+
     <div class="headerNavbar">
         <div class="containerNavbar">
             <img src="Imagens/FUTEBOL.png" class="imagemSantista">
@@ -21,29 +23,81 @@
             </ul>
         </div>
     </div>
-<br>
-<br>
-<br>
+    <br>
+    <br>
+    <br>
     <div class="PaiLogin">
 
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
+
         <div class="FilhoLogin">
-        <h1>Cadastro</h1> <br>
 
-        Nome: <input type="text" id="input_nome"> <br>
-        
-        Email: <input type="text" id="input_email"> <br>
-        
-        Senha: <input type="password" id="input_senha"> <br>
+            <h1>Cadastro</h1> <br>
 
-        Confirmar Senha: <input type="password" id="input_senhaConfirmar"> <br>
-        
-        <button class="botao" onclick="cadastro()">Cadastre-se</button> <br>
-        
-        <p style="color: #ffffff;">Já possui uma conta? <a href="loginFutebol.html" style="color: #ffffff;">Entrar</a></p>
-        
-        
+            Nome: <input type="text" id="input_nome"> <br>
+
+            Email: <input type="text" id="input_email"> <br>
+
+            Senha: <input type="password" id="input_senha"> <br>
+
+            Confirmar Senha: <input type="password" id="input_senhaConfirmar"> <br>
+
+            <button class="botao" onclick="cadastro()">Cadastre-se</button> <br>
+
+            <p style="color: #ffffff;">Já possui uma conta? <a href="loginFutebol.html"
+                    style="color: #ffffff;">Entrar</a></p>
+
+
         </div>
-        
-        </div>
+
+    </div>
 </body>
+
 </html>
+
+<script>
+
+    function cadastro() {
+
+        const nome = input_nome.value
+        const email = input_email.value
+        const senha = input_senha.value
+        const confirmarSenha = input_senhaConfirmar.value
+        const arrobaEmail = email.indexOf("@");
+        const pontoEmail = email.indexOf(".");
+
+        if (senha != confirmarSenha) {
+
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML = "Os dois campos de senha devem ser igual!";
+
+        } else if (nome.length <= 1) {
+
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML = "Seu nome deve ter mais de 1 caractere!";
+
+        } else if (arrobaEmail == -1 || pontoEmail == -1) {
+
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML = "Seu e-mail deve conter pelo menos um @ e um .";
+
+        } else if (senha.length <= 6) {
+
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML = "Sua senha deve ter mais de 6 caracteres!";
+
+        }
+
+
+
+    }
+
+
+
+
+
+</script>

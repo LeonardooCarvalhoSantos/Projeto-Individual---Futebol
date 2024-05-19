@@ -24,8 +24,8 @@ a {
 
 .imagemSantista {
 
-width: 10vw;
-height: 20vh;
+    width: 10vw;
+    height: 20vh;
 
 
 }
@@ -97,7 +97,7 @@ height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
-   background-color: white;
+    background-color: white;
     color: #ffffff;
 }
 
@@ -179,12 +179,34 @@ height: 20vh;
     border-radius: 10px;
     color: rgb(0, 0, 0);
     font-size: 15px;
-    }
-    
-    .botao:hover {
-    
+}
+
+.botao:hover {
+
     background-color: rgb(141, 141, 141);
     cursor: pointer;
-    
-    
-    }
+
+
+}
+
+.alerta_erro {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card_erro {
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 230px;
+    position: fixed;
+    border-radius: 4px;
+    border: #000000 3px solid;
+    padding: 10px;
+    margin-right: 10%;
+}
+
+.card_erro #mensagem_erro {
+    font-weight: 500;
+    font-size: 20px;
+}

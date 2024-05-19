@@ -318,6 +318,7 @@ function showSuccessMessage() {
   // trocar dados tela de sucesso
   // calcular score
   const score = ((points / questions.length) * 100).toFixed(2);
+  // ok.innerHTML = score
 
   const displayScore = document.querySelector('#display-score span');
   displayScore.textContent = score.toString();
