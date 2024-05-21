@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: #007BFF;
+}
+
+.containerNavbar {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerNavbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.imagemSantista {
+    width: 80px;
+    height: auto;
+}
+
+.navbar {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    padding: 15px 10px;
+}
+
+.PaiLogin {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.FilhoLogin h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.FilhoLogin form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.FilhoLogin label {
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.FilhoLogin input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.botao {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao:hover {
+    background-color: #0056b3;
+}
+
+.FilhoLogin p {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.FilhoLogin p a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+}
