@@ -119,3 +119,8 @@ a:hover {
     border-radius: 4px;
     text-align: center;
 }
+
+.card_erro #mensagem_erro{
+    font-weight: 500;
+    font-size: 20px;
+  }
