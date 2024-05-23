@@ -21,8 +21,14 @@
         </div>
     </div>
 
-
     <div class="PaiLogin">
+
+        <div class="alerta_erro" id="alertaErro">
+            <div class="card_erro" id="cardErro">
+              <span id="mensagem_erro"></span>
+            </div>
+          </div>
+
         <div class="FilhoLogin">
             <h1>Login</h1>
             <form>
@@ -49,7 +55,7 @@
         var senhaVar = input_senha.value;
 
         if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
+            alertaErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
             return false;
         }
@@ -80,7 +86,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "Dashboard.html";
+                        window.location = "FutQuiz.html";
                     }, 1000); // apenas para exibir o loading
 
                 });

@@ -318,7 +318,7 @@ function showSuccessMessage() {
   // trocar dados tela de sucesso
   // calcular score
   const score = ((points / questions.length) * 100).toFixed(2);
-  // ok.innerHTML = score
+  // d.innerHTML = score
 
   const displayScore = document.querySelector('#display-score span');
   displayScore.textContent = score.toString();
@@ -330,6 +330,18 @@ function showSuccessMessage() {
   // alterar o total de perguntas
   const totalQuestions = document.querySelector('#questions-qty');
   totalQuestions.textContent = questions.length;
+
+  fetch("/quiz/cadastrar", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      // crie um atributo que recebe o valor recuperado aqui
+      // Agora vá para o arquivo routes/usuario.js
+      scoreServer: score,
+    }),
+  })
 }
 
 // mostra ou esonde o score

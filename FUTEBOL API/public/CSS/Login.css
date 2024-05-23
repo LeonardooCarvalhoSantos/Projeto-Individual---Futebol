@@ -105,3 +105,22 @@ a:hover {
     text-decoration: none;
     font-weight: 700;
 }
+
+.alerta_erro {
+    display: none; /* Isso pode ser ativado dinamicamente com JavaScript */
+    margin-bottom: 20px;
+}
+
+.card_erro {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.card_erro #mensagem_erro{
+    font-weight: 500;
+    font-size: 20px;
+  }
