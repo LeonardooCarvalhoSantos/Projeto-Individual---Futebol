@@ -6,6 +6,7 @@ const scoreContainer = document.querySelector('#score-container');
 const letters = ['a', 'b', 'c', 'd', 'e'];
 let points = 0;
 let actualQuestion = 0;
+let idUsuario = sessionStorage.ID_USUARIO
 
 // perguntas
 const questions = [
@@ -339,9 +340,26 @@ function showSuccessMessage() {
     body: JSON.stringify({
       // crie um atributo que recebe o valor recuperado aqui
       // Agora vá para o arquivo routes/usuario.js
-      scoreServer: score,
+      usuarioIdserver: idUsuario,
+      scoreServer: score
     }),
   })
+  .then(function (resposta) {
+    console.log("resposta: ", resposta);
+
+    if (resposta.ok) {
+
+      setTimeout(() => {
+        window.location = "dashboard.html";
+      }, "2000");
+
+    } else {
+      throw "Houve um erro ao tentar realizar o cadastro!";
+    }
+  })
+  .catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+  });
 }
 
 // mostra ou esonde o score
