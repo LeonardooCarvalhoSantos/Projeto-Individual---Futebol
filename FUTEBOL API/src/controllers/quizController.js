@@ -3,17 +3,17 @@ var quizModel = require("../models/quizModel");
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var score = req.body.scoreServer;
-    var usuarioId = req.body.usuarioIdserver;
+    var idUsuario = req.body.usuarioIdserver;
 
     // Faça as validações dos valores
     if (score == undefined) {
         res.status(400).send();
-    } else if (usuarioId == undefined) {
+    } else if (idUsuario == undefined) {
         res.status(400).send();
     } else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        quizModel.cadastrar(score,usuarioId)
+        quizModel.cadastrar(score,idUsuario)
             .then(
                 function (resultado) {
                     res.json(resultado);
