@@ -341,7 +341,7 @@ function showSuccessMessage() {
       // crie um atributo que recebe o valor recuperado aqui
       // Agora vá para o arquivo routes/usuario.js
       usuarioIdserver: idUsuario,
-      scoreServer: score
+      scoreServer: points
     }),
   })
   .then(function (resposta) {
@@ -351,7 +351,7 @@ function showSuccessMessage() {
 
       setTimeout(() => {
         window.location = "dashboard.html";
-      }, "2000");
+      }, "1000");
 
     } else {
       throw "Houve um erro ao tentar realizar o cadastro!";

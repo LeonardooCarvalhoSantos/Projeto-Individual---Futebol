@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/Imgs/Futebol.jpg">
-    <title>AquaTech | Dashboards</title>
+    <link rel="shortcut icon" href="assets/Imgs/FUTEBOL.png">
+    <title>Dashboard</title>
 
     
     <link rel="stylesheet" href="./../css/dashboards.css">
@@ -33,44 +33,26 @@
 
     <div class="janela">
         <div class="header-left">
-            <h1>AquaTech</h1>
+            <img src="assets/Imgs/FUTEBOL.png" style="display: flex; width: 20vh; height: 10vw;">
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
 
-            <div class="btn-nav-white">
-                <a href="./cards.html">
-                    <h3>Aquários</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav">
-
-                <h3>Gráficos</h3>
-
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
-                </a>
-            </div>
-
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
+            <div class="btn-logout">
+                <h3><a href="onuFutebol.html">Sair</h3></a>
             </div>
 
         </div>
 
         <div class="dash">
-            <div id="alerta">
+            <div class="kpi" id="kpi-left">
+                <h2>Sua pontuação em %</h2>
+                <p id="totalsales">0</p>
             </div>
 
-            <div class="btns-dash" id="btnAquario">
-                <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-            </div>
-            <div id="graficos">
+            <div id="graficos" class="chart-container">
+                <canvas style="background-color: white;" id="myChartCanvas"></canvas>
             </div>
         </div>
     </div>
@@ -175,19 +157,21 @@
         console.log('iniciando plotagem do gráfico...');
 
         // Criando estrutura para plotar gráfico - labels
-        let labels = [score];
+        let labels = ["Pontução maxima permitida", "Sua pontução"];
 
         // Criando estrutura para plotar gráfico - dados
         let dados = {
             labels: labels,
             datasets: [{
                 label: 'Pontuação',
-                data: [],
+                data: [10],
                 fill: false,
-                borderColor: 'rgb(75, 192, 192)',
+                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                borderColor: 'rgba(0, 0, 0, 2)',
                 tension: 0.1
             }]
         };
+
 
         console.log('----------------------------------------------')
         console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
@@ -220,7 +204,6 @@
             config
         );
 
-        setTimeout(() => atualizarGrafico(idUsuario, dados, myChart), 2000);
     }
 
 
