@@ -1,199 +1,195 @@
-
 body {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #ffffff; /* Define a cor de fundo do corpo da página */
+  color: #000000; /* Define a cor do texto do corpo da página */
 }
 
 header h1 {
-
-  color: #000000;
-
+  color: #000000; /* Define a cor do texto do cabeçalho h1 */
 }
 
 a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: 0.5s;
+  color: #ffffff; /* Define a cor do texto dos links */
+  text-decoration: none; /* Remove a sublinhado dos links */
+  transition: 0.5s; /* Define uma transição suave de 0.5 segundos para mudanças */
 }
 
 a:hover {
-  color: #00c9c8;
+  color: #00c9c8; /* Altera a cor do texto dos links quando o mouse está sobre eles */
 }
 
 textarea:focus,
 input:focus,
 select:focus,
 button:focus {
-  box-shadow: 0 0 0 0;
-  border: 0 none;
-  outline: 0;
+  box-shadow: 0 0 0 0; /* Remove a sombra de foco */
+  border: 0 none; /* Remove a borda de foco */
+  outline: 0; /* Remove o contorno de foco */
 }
 
 .container {
-  display: grid;
+  display: grid; /* Define o layout como grid */
   grid-template-areas:
     'header'
     'main'
-    'footer';
-  position: relative;
-  height: 100vh;
-  background-color: #ffffff;
+    'footer'; /* Define as áreas do grid */
+  position: relative; /* Define a posição relativa do contêiner */
+  height: 100vh; /* Define a altura como 100% da altura da viewport */
+  background-color: #ffffff; /* Define a cor de fundo do contêiner */
 }
 
 header,
 main,
 footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; /* Define o layout como flex */
+  align-items: center; /* Alinha os itens ao centro na vertical */
+  justify-content: center; /* Alinha os itens ao centro na horizontal */
 }
 
 header,
 footer {
-  width: 100%;
-  height: 100px;
-  padding: 30px 0;
-  background-color: #ffffff;
+  width: 100%; /* Define a largura como 100% */
+  height: 100px; /* Define a altura como 100px */
+  padding: 30px 0; /* Define o padding superior e inferior como 30px */
+  background-color: #ffffff; /* Define a cor de fundo */
 }
 
 header {
-  grid-area: header;
+  grid-area: header; /* Define a área do grid como cabeçalho */
 }
 
 main {
-  grid-area: main;
-  margin-top: 20px;
-  margin-bottom: 140px;
+  grid-area: main; /* Define a área do grid como principal */
+  margin-top: 20px; /* Define a margem superior como 20px */
+  margin-bottom: 140px; /* Define a margem inferior como 140px */
 }
 
-
 .hide {
-  display: none !important;
+  display: none !important; /* Esconde o elemento */
 }
 
 /* SCORE CONTAINER */
 #quizz-container,
 #score-container {
-  color: #222222;
-  text-align: center;
-  padding: 25px;
-  border: 1px solid #e0e0e0;
-  box-shadow: 7px 10px 0px rgba(0, 0, 0, 0.1);
+  color: #222222; /* Define a cor do texto */
+  text-align: center; /* Centraliza o texto */
+  padding: 25px; /* Define o padding de 25px */
+  border: 1px solid #e0e0e0; /* Define uma borda de 1px sólida e cinza claro */
+  box-shadow: 7px 10px 0px rgba(0, 0, 0, 0.1); /* Define uma sombra com 7px de desfoque horizontal, 10px de desfoque vertical, e uma cor preta semitransparente */
 }
 
 #quizz-container,
 #score-container {
-  width: 500px;
-  max-width: 90%;
+  width: 500px; /* Define a largura como 500px */
+  max-width: 90%; /* Define a largura máxima como 90% */
 }
 
 #score-container p {
-  margin: 20px 0;
+  margin: 20px 0; /* Define a margem superior e inferior como 20px */
 }
 
 #score-container #display-score {
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 32px; /* Define o tamanho da fonte como 32px */
+  font-weight: bold; /* Define a fonte como negrito */
 }
 
 #correct-answers {
-  font-weight: bold;
-  color: #2eb94c;
+  font-weight: bold; /* Define a fonte como negrito */
+  color: #2eb94c; /* Define a cor do texto como verde */
 }
 
 #questions-qty {
-  font-weight: bold;
-  color: #00c9c8;
+  font-weight: bold; /* Define a fonte como negrito */
+  color: #00c9c8; /* Define a cor do texto como ciano */
 }
 
 #restart {
-  background-color: #000000;
-  color: #fff;
-  font-weight: bold;
-  height: 50px;
-  border: 1px solid #ffffff;
-  width: 180px;
-  text-transform: uppercase;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: 0.5s;
+  background-color: #000000; /* Define a cor de fundo como preta */
+  color: #fff; /* Define a cor do texto como branca */
+  font-weight: bold; /* Define a fonte como negrito */
+  height: 50px; /* Define a altura como 50px */
+  border: 1px solid #ffffff; /* Define a borda de 1px sólida e branca */
+  width: 180px; /* Define a largura como 180px */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  margin-top: 20px; /* Define a margem superior como 20px */
+  cursor: pointer; /* Define o cursor como ponteiro ao passar o mouse */
+  transition: 0.5s; /* Define uma transição suave de 0.5 segundos */
 }
 
 #restart:hover {
-  background-color: #2a272a;
-  color: #ffffff;
+  background-color: #2a272a; /* Altera a cor de fundo ao passar o mouse */
+  color: #ffffff; /* Define a cor do texto como branca ao passar o mouse */
 }
 
 /* Quizz container */
 #question {
-  text-align: center;
-  margin-bottom: 25px;
-  font-size: 20px;
-  color: #222222;
-  font-weight: bold;
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 25px; /* Define a margem inferior como 25px */
+  font-size: 20px; /* Define o tamanho da fonte como 20px */
+  color: #222222; /* Define a cor do texto como cinza escuro */
+  font-weight: bold; /* Define a fonte como negrito */
 }
 
 #answers-box button {
-  display: flex;
-  align-items: stretch;
-  margin: 15px 0;
-  width: 100%;
-  border: none;
-  text-align: left;
-  color: #222222;
-  cursor: pointer;
-  transition: 0.5s;
+  display: flex; /* Define o layout como flex */
+  align-items: stretch; /* Alinha os itens esticando-os verticalmente */
+  margin: 15px 0; /* Define a margem superior e inferior como 15px */
+  width: 100%; /* Define a largura como 100% */
+  border: none; /* Remove a borda */
+  text-align: left; /* Alinha o texto à esquerda */
+  color: #222222; /* Define a cor do texto como cinza escuro */
+  cursor: pointer; /* Define o cursor como ponteiro ao passar o mouse */
+  transition: 0.5s; /* Define uma transição suave de 0.5 segundos */
 }
 
 #answers-box button:hover {
-  background-color: #2a272a;
-  color: #fff;
+  background-color: #2a272a; /* Altera a cor de fundo ao passar o mouse */
+  color: #fff; /* Define a cor do texto como branca ao passar o mouse */
 }
 
 #answers-box .btn-letter {
-  font-size: 30px;
-  font-weight: bold;
-  background-color: #2a272a;
-  border: none;
-  color: #fff;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1 1 0;
-  padding: 5px;
-  max-width: 45px;
+  font-size: 30px; /* Define o tamanho da fonte como 30px */
+  font-weight: bold; /* Define a fonte como negrito */
+  background-color: #2a272a; /* Define a cor de fundo como preta */
+  border: none; /* Remove a borda */
+  color: #fff; /* Define a cor do texto como branca */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  display: flex; /* Define o layout como flex */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  flex: 1 1 0; /* Define a flexibilidade dos itens */
+  padding: 5px; /* Define o padding de 5px */
+  max-width: 45px; /* Define a largura máxima como 45px */
 }
 
 .question-answer {
-  flex: 1 1 0;
-  display: flex;
-  padding: 10px 0;
-  align-items: center;
-  margin-left: 10px;
-  font-size: 16px;
+  flex: 1 1 0; /* Define a flexibilidade dos itens */
+  display: flex; /* Define o layout como flex */
+  padding: 10px 0; /* Define o padding superior e inferior como 10px */
+  align-items: center; /* Centraliza os itens verticalmente */
+  margin-left: 10px; /* Define a margem à esquerda como 10px */
+  font-size: 16px; /* Define o tamanho da fonte como 16px */
 }
 
 #quizz-container .wrong-answer,
 #quizz-container .wrong-answer .btn-letter {
-  background-color: #e62210;
-  color: #fff;
-  border: none;
+  background-color: #e62210; /* Define a cor de fundo vermelha para respostas erradas */
+  color: #fff; /* Define a cor do texto como branca */
+  border: none; /* Remove a borda */
 }
 
 #quizz-container .correct-answer,
 #quizz-container .correct-answer .btn-letter {
-  background-color: #2eb94c;
-  color: #fff;
-  border: none;
+  background-color: #2eb94c; /* Define a cor de fundo verde para respostas corretas */
+  color: #fff; /* Define a cor do texto como branca */
+  border: none; /* Remove a borda */
 }
 
 /* RESPONSIVO */
 @media (max-width: 450px) {
   #quizz-container,
   #score-container {
-    border: none;
-    width: 100%;
-    box-shadow: none;
+    border: none; /* Remove a borda */
+    width: 100%; /* Define a largura como 100% */
+    box-shadow: none; /* Remove a sombra */
   }
 }

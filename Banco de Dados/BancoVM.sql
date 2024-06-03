@@ -16,5 +16,8 @@ fkUsuario int,
 foreign key (fkUsuario) references Usuario (id)
 );
 
+insert into Usuario (Nome, Email, Senha)
+values ('ppp', 'ppp@email.com', '1234567');
+
 select * from Quizz;
 select * from Usuario;
