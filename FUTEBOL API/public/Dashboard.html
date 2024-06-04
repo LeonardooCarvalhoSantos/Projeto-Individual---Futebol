@@ -48,7 +48,7 @@
         <div class="dash">
             <div class="kpi" id="kpi-left">
                 <h2>Sua pontuação em %</h2>
-                <p id="totalsales">0</p>
+                <p id="totalsales">total</p>
             </div>
 
             <div id="graficos" class="chart-container">
@@ -63,6 +63,7 @@
 </html>
 
 <script>
+    totalsales.innerHTML = sessionStorage.TOTAL_USUARIO
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     let proximaAtualizacao;
@@ -142,14 +143,14 @@
         console.log('iniciando plotagem do gráfico...');
 
         // Criando estrutura para plotar gráfico - labels
-        let labels = ["Pontução maxima permitida", "Sua pontução"];
+        let labels = ["Sua pontução"];
 
         // Criando estrutura para plotar gráfico - dados
         let dados = {
             labels: labels,
             datasets: [{
                 label: 'Pontuação',
-                data: [10],
+                data: [],
                 fill: false,
                 backgroundColor: 'rgba(0, 0, 0, 0.5)',
                 borderColor: 'rgba(0, 0, 0, 2)',

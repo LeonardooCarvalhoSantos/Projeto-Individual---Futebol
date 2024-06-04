@@ -112,10 +112,10 @@ a:hover {
 }
 
 .card_erro {
-    background-color: #f8d7da;
-    color: #721c24;
+    background-color: #000000;
+    color: #ffffff;
     padding: 10px;
-    border: 1px solid #f5c6cb;
+    border: 1px solid #000000;
     border-radius: 4px;
     text-align: center;
 }

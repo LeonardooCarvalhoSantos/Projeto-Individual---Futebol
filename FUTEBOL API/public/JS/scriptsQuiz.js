@@ -332,6 +332,9 @@ function showSuccessMessage() {
   const totalQuestions = document.querySelector('#questions-qty'); // Seleciona o elemento que exibe o total de perguntas
   totalQuestions.textContent = questions.length; // Define o texto com o total de perguntas
 
+  let total = score
+  sessionStorage.TOTAL_USUARIO = total
+
   fetch("/quiz/cadastrar", {
     method: "POST", // Define o método HTTP como POST
     headers: {

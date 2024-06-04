@@ -67,7 +67,18 @@
     var arrobaEmail = emailVar.indexOf("@");
     var pontoEmail = emailVar.indexOf(".");
 
-    if (senhaVar.length <= 6) {
+    if (
+      nomeVar == "" ||
+      emailVar == "" ||
+      senhaVar == "" ||
+      confirmacaoSenhaVar == ""
+    ) {
+      alertaErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Preencha todos os campos!";
+
+      return false;
+    } else if (senhaVar.length <= 6) {
 
       for (let posicao = 0; posicao <= senhaVar.length; posicao++) {
 
@@ -102,17 +113,6 @@
 
       return false;
 
-    } else if (
-      nomeVar == "" ||
-      emailVar == "" ||
-      senhaVar == "" ||
-      confirmacaoSenhaVar == ""
-    ) {
-      alertaErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
-
-      return false;
     }
 
     // Enviando o valor da nova input
