@@ -21,3 +21,4 @@ values ('ppp', 'ppp@email.com', '1234567');
 
 select * from Quizz;
 select * from Usuario;
+

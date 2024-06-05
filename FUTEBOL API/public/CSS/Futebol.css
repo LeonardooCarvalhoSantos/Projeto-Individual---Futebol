@@ -61,6 +61,27 @@ a:hover {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.bannerSantista {
+    background-image: url("../assets/Imgs/Santos_Logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80vw;
+    height: 60vh;
+    display: flex;
+    align-items: flex-end; /* Alinha o conteúdo ao fundo */
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    border: 2px solid white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
 .Banner-Tittel {
     font-size: 2.5rem;
     text-align: center;
@@ -68,6 +89,22 @@ a:hover {
     padding: 20px;
     border-radius: 10px;
 }
+
+
+.Banner-TittelSantos {
+    font-size: 1rem; /* Reduz o tamanho da fonte */
+    text-align: left; /* Alinha o texto à esquerda */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px; /* Reduz o espaçamento interno */
+    border-radius: 10px; /* Ajusta a borda arredondada */
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px; /* Reduz o espaçamento entre as letras */
+    line-height: 1.2;
+    position: relative;
+    z-index: 1;
+}
+
+
 
 .cards {
     display: flex;

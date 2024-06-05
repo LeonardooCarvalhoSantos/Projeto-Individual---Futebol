@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/Imgs/FUTEBOL.png">
-    <title>Dashboard</title>
+    <title>Futebol Santista</title>
 
     
     <link rel="stylesheet" href="./../css/dashboards.css">
@@ -143,13 +143,20 @@
         console.log('iniciando plotagem do gráfico...');
 
         // Criando estrutura para plotar gráfico - labels
-        let labels = ["Sua pontução"];
+        let labels = ["Pontuação"];
 
         // Criando estrutura para plotar gráfico - dados
         let dados = {
             labels: labels,
             datasets: [{
-                label: 'Pontuação',
+                label: 'Sua pontuação',
+                data: [],
+                fill: false,
+                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                borderColor: 'rgba(0, 0, 0, 2)',
+                tension: 0.1
+            },{
+                label: 'Media dos usuários',
                 data: [],
                 fill: false,
                 backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -168,6 +175,7 @@
             var registro = resposta[i];
             // labels.push(registro.momento_grafico);
             dados.datasets[0].data.push(registro.score);
+            dados.datasets[1].data.push(Number(registro.media));
         }
 
         console.log('----------------------------------------------')
